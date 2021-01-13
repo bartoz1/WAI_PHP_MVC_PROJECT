@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+  font-family: logoFont;
+  src: url('https://fonts.googleapis.com/css2?family=Itim&display=swap')
+}
+body {
+  background-color: rgb(235, 232, 232);
+  font-size: 20px;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+.wrapper {
+  margin: auto;
+  background-color: white;
+  padding: 0 10px 0 10px;
+}
+nav {
+  height: 30px;
+}
+h1{
+  margin: 10px;
+}
+h1, h2{
+  
+  text-align: center;
+}
+.tekst{
+  text-align: justify;
+}
+.gwiazdka {
+  position: relative;
+  width: 40px;
+  top: 8px;
+  opacity: 40%;
+}
+/* .polubiony{
+  opacity: 100%;
+  
+} */
+#powiadomienie {
+  display: none;
+  position: fixed;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  background-color: mediumspringgreen;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+.pokaz{
+  display: inline-block;
+}
+.gwiazdka:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+#menu{
+  /* display: none; */
+  position: fixed;
+  /* top: 40px; */
+  top: -150%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: salmon;
+  text-align: center;
+  z-index: 5;
+  transition: ease-in-out .5s;
+}
+#menu li{
+  margin: 15px 0px 15px 0;
+}
+
+#res-menu{
+  display: none;
+  
+}
+.logo{
+  position: absolute;
+  font-family: "Itim", cursive;
+  font-size: 20px;;
+}
+.burger{
+  position: absolute;
+  font-size: 50px;
+  font-weight: bold;
+  top: -13px;
+  right: 40px;
+}
+.burger:hover{
+  cursor: pointer;
+}
+#res-menu:checked ~ #menu{
+    /* display: inline; */
+    top: 40px;
+}
+nav a{
+    padding: 3px 5px 5px 5px;
+    color: black;
+    text-decoration: none;
+}
+.active{
+    border: rgb(31, 65, 177) dotted 2px;
+    font-weight: bold;
+}
+.clear{
+    clear: both;
+}
+header {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: salmon;
+}
+.przepis {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  /* text-align: center; */
+}
+.przycisk_cont{
+  display: flex;
+  align-items: center;
+}
+.paginacja{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;
+}
+.pagi_button{
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: green solid 2px;
+  border-radius: 5px;
+  margin: 5px;
+}
+.pagi_active{
+  background-color: rgba(0, 128, 0, 0.383);
+}
+.przycisk{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+  background-color: rgba(0, 128, 0, 0.219);
+  border: green dashed 3px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+.przycisk:hover{
+  background-color: rgba(0, 128, 0, 0.619);
+  cursor: pointer;
+}
+
+.przepis ul{
+    list-style-position: inside;
+    list-style-type: circle;
+}
+.przepis h2{
+  margin-bottom: 10px;;
+}
+/* .przepis img{
+  margin-left: auto;
+  margin-right: auto;
+} */
+.skladniki {
+  display: inline-block;
+}
+.skladniki li:hover {
+  cursor: pointer;
+}
+.opis{
+    margin-top: 10px;
+    text-align: justify;
+}
+.opis::first-line{
+  font-weight: bold;
+}
+.jpg_przepisu{
+    height: 200px;
+    /* float: left; */
+    /* margin-right: 20px; */
+    display: block;
+    margin: auto;
+}
+#przedzial_cenowy{
+  display: none;
+}
+.ui-tooltip {
+  width: 210px;
+}
+#slider-range{
+  margin-bottom: 20px;
+}
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(176, 218, 218);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.zdjecie{
+  /* width: 100%; */
+  height: auto;
+  margin: 10px;
+}
+.galeria img{
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+}
+.galeria img:hover{
+  opacity: 80%;
+  cursor: zoom-in;
+}
+table{
+  border-collapse: collapse;
+  margin: auto;
+}
+th{
+  background-color: teal;
+  color: rgb(255, 255, 255);
+}
+table, td, th{
+  border: 1px solid black;
+  padding: 5px;
+}
+tr:hover {
+  background-color: rgba(0, 128, 128, 0.11);
+}
+.zrodlo{
+  text-align: center;
+  text-decoration: none;
+}
+.zrodlo a{
+  color: black;
+}
+.powrot {
+  text-align: right;
+}
+#form_przepis{
+  max-width: 500px;
+  margin: 20px auto 20px auto;
+  text-align: center;
+  border: seagreen 2px dashed;
+  border-radius: 10px;
+  padding: 10px;
+}
+#form_przepis input,  #form_przepis textarea{
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+.def_form{
+  max-width: 500px;
+  margin: 20px auto 20px auto;
+  text-align: center;
+  border: seagreen 2px dashed;
+  border-radius: 10px;
+  padding: 10px;
+}
+.def_form input,  .def_form textarea{
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+.przeslij{
+  background-color: rgb(33, 209, 109);
+  border: 1px solid black;
+}
+.przeslij:hover, .wyczysc:hover{
+  cursor: pointer;
+}
+.kalorycznosc{
+  display: none;
+}
+.kalorycznosc h2{
+  margin-bottom: 20px;
+}
+#kontakt {
+  list-style-type: none;
+  
+}
+.lista_zakupow{
+  
+  padding: 25px;
+  margin: auto;
+  list-style-position: inside;
+  border: 3px dashed olivedrab;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.lista_zakupow button, .lista_zakupow input {
+  padding: 5px;
+}
+main{
+  min-height: 90vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* height: 100%; */
+}
+.licznik {
+  padding: 10px;
+}
+#lista_input{
+  margin-bottom: 10px;
+}
+.karta{
+  /* min-width: 10px; */
+  font-size: 20px;
+  margin: auto;
+  margin-top: 30px;
+  width: 300px;
+  padding: 20px;
+  background-color: wheat;
+  border-radius: 20px;
+  text-align: center;
+  animation: animacja 5s linear 2s infinite;
+}
+
+.dropbtn {
+  position: relative;
+  top: -3px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: salmon;
+  padding: 3px 5px 5px 5px;
+  }
+  
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: #f9f9f9;
+  min-width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+.tekst_menu {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0e4e4
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn, nav a:hover {
+  color: rgb(84, 84, 245);
+  background-color: rgba(228, 232, 238, 0.219);
+}
+footer{
+  /* width: 100%; */
+  /* padding-top: 10px; */
+  padding: 5px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  background-color: salmon;
+}
+footer .logo{
+  position: relative;
+}
+@keyframes animacja {
+  0% {background-color: wheat;}
+  25% {background-color: tomato;}
+  50% {background-color: mediumvioletred;}
+  75% {background-color: sienna;}
+  100% {background-color: wheat;}
+}
+
+@media only screen and (min-width: 720px) {
+    body {
+      
+    }
+    .logo{
+      position: relative;
+    }
+    .wrapper {
+        max-width: 820px;
+    }
+    #res-menu, .burger{
+      display: none;
+    }
+    #menu{
+      text-decoration: none;
+      list-style: none;
+      display: inline;
+      top: 0;
+      position: relative;
+      transition: none;
+    }
+    /* #otworz_menu{
+      display: none;
+    } */
+    #menu li{
+      /* display: inline; */
+      float: right;
+      margin: 0;
+    }
+    .jpg_przepisu{
+      height: 200px;
+      float: left; 
+      margin-right: 20px;
+      /* display: block;
+      margin: auto; */
+    }
+    .galeria img{
+     height: 200px;
+      width: 300px;
+     }
+     .kalorycznosc{
+       display: block;
+     }
+     .lista_zakupow{
+      width: 400px;
+     }
+
+     @keyframes animacja {
+      0% {background-color: wheat; width: 300px;}
+      25% {background-color: tomato;}
+      50% {background-color: mediumvioletred;width: 400px;}
+      75% {background-color: sienna;}
+      100% {background-color: wheat;width: 300px;}
+    }
+    
+  }
+
